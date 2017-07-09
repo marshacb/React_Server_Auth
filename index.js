@@ -5,8 +5,12 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express(); //express instance
 const router = require('./router');
+const mongoose = require('mongoose');
 //install nodemon, watched file for changes and auto reloads
 
+// DB Setup
+// creates a new database inside of mongodb called auth
+mongoose.connect('mongodb://localhost:auth/auth');
 
 
 //App Setup, get express working
